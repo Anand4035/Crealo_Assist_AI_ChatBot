@@ -73,7 +73,8 @@ Crealo-Assist/
 ```bash
 git clone https://github.com/your-username/crealo-assist.git
 cd crealo-assist
-### 2️⃣ Backend Setup
+
+##2️⃣ Backend Setup
 cd backend
 python -m venv .venv
 .venv\Scripts\activate   # Windows
@@ -82,7 +83,8 @@ pip install -r requirements.txt
 Run server:
 
 uvicorn main:app --reload
-### 3️⃣ Frontend Setup
+
+##3️⃣ Frontend Setup
 Open frontend/index.html
 Or run using Live Server (VS Code)
 🔗 API Endpoint
@@ -108,7 +110,7 @@ Implementing real-time streaming with FastAPI
 Handling async communication
 Designing interactive UI/UX
 Integrating AI models into web applications
-🚀 Future Improvements
+##🚀 Future Improvements
 🎤 Voice input & output
 🧠 Context-aware memory
 🌍 Deployment (Docker / Cloud)
