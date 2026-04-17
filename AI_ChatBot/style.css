@@ -1,0 +1,212 @@
+/* 🌑 GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌙 BODY */
+body {
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        rgba(5, 10, 25, 1),
+        rgba(10, 20, 40, 1),
+        rgba(15, 30, 60, 1)
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 💎 MAIN CONTAINER */
+.container {
+    width: 380px;
+    height: 600px;
+
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+/* 🔝 HEADER */
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 198, 255, 0.2),
+        rgba(0, 114, 255, 0.2)
+    );
+
+    color: white;
+    font-weight: 600;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* 🌟 LOGO */
+.logo {
+    width: 36px;
+    height:36px;
+    border-radius: 50%;
+
+    filter: brightness(1.1) hue-rotate(180deg);
+
+    box-shadow: 0 0 10px rgba(66, 200, 236, 0.8);
+}
+
+/* 💬 CHAT AREA */
+.chatbox {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 💬 MESSAGE BASE */
+.message {
+    padding: 12px 16px;
+    border-radius: 18px;
+    max-width: 75%;
+    font-size: 14px;
+
+    animation: fadeIn 0.3s ease;
+}
+
+/* 👤 USER MESSAGE */
+.user {
+    align-self: flex-end;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 198, 255, 1),
+        rgba(0, 114, 255, 1)
+    );
+
+    color: white;
+
+    box-shadow: 
+        0 5px 20px rgba(0,114,255,0.6),
+        0 0 10px rgba(0,198,255,0.4);
+}
+
+/* 🤖 BOT MESSAGE */
+.bot {
+    align-self: flex-start;
+
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.95);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    box-shadow: 0 0 10px rgba(255,255,255,0.05);
+}
+
+/* 📥 INPUT AREA */
+.input-area {
+    display: flex;
+    padding: 12px;
+
+    background: rgba(0,0,0,0.5);
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ✍️ INPUT FIELD */
+input {
+    flex: 1;
+    padding: 12px 14px;
+
+    border: none;
+    border-radius: 25px;
+    outline: none;
+
+    background: rgba(255,255,255,0.07);
+    color: white;
+
+    font-size: 14px;
+
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.5);
+}
+
+/* Placeholder */
+input::placeholder {
+    color: rgba(200,200,200,0.6);
+}
+
+/* 🔘 SEND BUTTON */
+button {
+    margin-left: 10px;
+    border: none;
+
+    padding: 12px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(0, 198, 255, 1),
+        rgba(0, 114, 255, 1)
+    );
+
+    color: white;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 
+        0 0 15px rgba(0,198,255,0.7),
+        0 0 30px rgba(0,114,255,0.4);
+}
+
+/* ✨ HOVER GLOW */
+button:hover {
+    transform: scale(1.15);
+
+    box-shadow: 
+        0 0 25px rgba(0,198,255,1),
+        0 0 50px rgba(0,114,255,0.8);
+}
+
+/* ✨ MESSAGE FADE ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌟 SCROLLBAR STYLING */
+.chatbox::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chatbox::-webkit-scrollbar-thumb {
+    background: rgba(0,198,255,0.5);
+    border-radius: 10px;
+}
